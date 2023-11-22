@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">App Components Playground</string>
+    <string name="application_components">Application components</string>
+    <string name="activity">Activity</string>
+    <string name="service">Service</string>
+    <string name="broadcast_receiver">Broadcast Receiver</string>
+    <string name="content_provider">Content Provider</string>
+
+    <plurals name="random_number">
+        <item quantity="zero">No number to restore!</item>
+        <item quantity="other">Restored random num from %s is: %d</item>
+    </plurals>
+    <string name="helper_text_field_without_id">No saving in Instant State</string>
+    <string name="helper_text_field_with_id">Will save in Instant State</string>
+    <string name="without_id">Without id</string>
+    <string name="with_id">With id</string>
+    <string name="intents">Intents</string>
+    <string name="launch_modes">Launch modes</string>
+
+    <string name="launch_nested_intent">Launch nested intent</string>
+    <string name="return_result">Return result</string>
+
+    <string name="empty_text">Empty text!</string>
+
+    <string name="send_email">Send Email</string>
+    <string name="unsafe_nested_intent">Unsafe nested intent</string>
+    <string name="safe_nested_intent">Safe nested intent</string>
+    <string name="share_text">Share text</string>
+    <string name="start_for_result">Start for result</string>
+
+    <string name="finish_and_remove_task">Finish and remove task</string>
+
+    <string name="previous_same_affinity_activity">Previous same affinity activity</string>
+
+    <string name="rerun_own">Rerun own</string>
+
+    <string name="another_same_affinity_activity">Another same affinity activity</string>
+
+    <string name="same_affinity">Same affinity</string>
+    <string name="non_same_affinity">Non same affinity</string>
+    <string name="single_task">Single Task</string>
+    <string name="standard">Standard</string>
+    <string name="simple">Simple</string>
+    <string name="single_top">Single Top</string>
+    <string name="new_document">New Document</string>
+    <string name="unique_document">Unique document</string>
+    <string name="never_document">Never document</string>
+
+    <string name="normal_broadcast">Normal broadcast</string>
+    <string name="do_short_job">Do a short job</string>
+    <string name="ordered_broadcast">Ordered broadcast</string>
+    <string name="roll_the_dice">Roll the dice</string>
+
+    <string name="cd_image">image</string>
+    <string name="open_image_with_saf">Open Image with SAF</string>
+    <string name="open_vocabulary">Open vocabulary</string>
+
+    <string name="word">Word</string>
+    <string name="new_word">New word</string>
+    <string name="apply">Apply</string>
+    <string name="clear_words">Clear words</string>
+
+    <string name="local_binder">Local binder</string>
+    <string name="remote_binder">Remote binder</string>
+    <string name="bound">Bound</string>
+    <string name="stop_heavy_job">Stop heavy job</string>
+    <string name="started">Started</string>
+    <string name="start_heavy_job">Start heavy job</string>
+
+    <string name="get_random_number">Get random number</string>
+
+    <string name="say_hello">Say hello</string>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".AppComponentsPlayground"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppComponentsPractice"
+        tools:targetApi="31" >
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.OwnActivity"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.intent.IntentsActivity"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.intent.ExplicitActivity"
+            android:launchMode="singleTop"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.intent.ImplicitActivity"
+            android:label="@string/activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.launchmode.LaunchModeActivity"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.launchmode.standard.SimpleActivity"
+            android:label="@string/activity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".activity.launchmode.singletop.SimpleActivity"
+            android:label="@string/activity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.launchmode.singletask.SameAffinityActivity"
+            android:label="@string/activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.launchmode.singletask.AnotherSameAffinityActivity"
+            android:label="@string/activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.launchmode.singletask.NonSameAffinityActivity"
+            android:label="@string/activity"
+            android:taskAffinity=""
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.launchmode.document.DocumentActivity"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.launchmode.document.UniqueDocumentActivity"
+            android:maxRecents="5"
+            android:label="@string/activity" />
+        <activity
+            android:name=".activity.launchmode.document.NeverDocumentActivity"
+            android:documentLaunchMode="never"
+            android:label="@string/activity" />
+
+        <activity
+            android:name=".service.ServiceActivity"
+            android:label="@string/service" />
+        <service android:name=".service.started.StartedService" />
+        <activity
+            android:name=".service.bound.local.LocalBoundActivity"
+            android:label="@string/service" />
+        <service android:name=".service.bound.local.LocalBoundService" />
+        <activity
+            android:name=".service.bound.remote.RemoteBoundActivity"
+            android:label="@string/service" />
+        <service
+            android:name=".service.bound.remote.RemoteBoundService"
+            android:process=":remote" />
+
+        <activity
+            android:name=".broadcast.BroadcastReceiverActivity"
+            android:label="@string/broadcast_receiver" />
+        <receiver
+            android:name=".broadcast.implicit.StaticImplicitReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".provider.ProviderActivity"
+            android:label="@string/content_provider" />
+        <activity
+            android:name=".provider.content.VocabularyProviderActivity"
+            android:label="@string/content_provider" />
+        <provider
+            android:name=".provider.content.VocabularyProvider"
+            android:authorities="ir.erfansn.appcomponentsplayground.provider"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="standard,standard_simple,single_top,single_top_simple,single_task,same_affinity,non_same_affinity,document,new_doc,unique_doc,never_doc"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/same_affinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/same_affinity" />
+
+    <TextView
+        android:id="@+id/document"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="Document"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/non_same_affinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/non_same_affinity" />
+
+    <TextView
+        android:id="@+id/single_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/single_task"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/standard"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/standard_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simple" />
+
+    <TextView
+        android:id="@+id/single_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/single_top"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/single_top_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simple" />
+
+    <Button
+        android:id="@+id/new_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_document" />
+
+    <Button
+        android:id="@+id/unique_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unique_document" />
+
+    <Button
+        android:id="@+id/never_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/never_document" />
+</androidx.constraintlayout.widget.ConstraintLayout>
